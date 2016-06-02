@@ -1,0 +1,25 @@
+CREATE TABLE `sales` (
+date_id INT,
+product_id INT,
+store_id INT,
+sales_quantity INT,
+unit_price INT,
+sales_amount INT)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+CREATE TABLE `date_dim` (
+id INT,
+s_date STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+CREATE TABLE `product_dim` (
+id INT,
+name STRING,
+category STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+
+CREATE TABLE `store_dim` (
+id INT,
+name STRING,
+city STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
